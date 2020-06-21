@@ -31,7 +31,9 @@
         <version>3.0.0-M4</version>
         <configuration>
           <suiteXmlFiles>
-            <suiteXmlFile>C:\Users\mithilaa\git\Trello_APITestingUsingRestAssured\Trello_API_Automation\resources\testng.xml</suiteXmlFile>
+            <suiteXmlFile>
+            C:\Users\mithilaa\git\Trello_APITestingUsingRestAssured\Trello_API_Automation\resources\testng.xml
+            </suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>

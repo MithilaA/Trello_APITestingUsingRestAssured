@@ -12,7 +12,8 @@ public class TrelloUtils {
 	public static String getProperty(String key) throws IOException
 	{
 		String value;
-		FileReader fileReader = new FileReader("C:\\Users\\mithilaa\\eclipse-workspace\\myworkspace\\Trello_API_Automation\\src\\main\\java\\com\\trello\\configuration\\environment.properties");
+		FileReader fileReader = new FileReader("C:\\Users\\mithilaa\\git\\Trello_APITestingUsingRestAssured"
+				+ "\\Trello_API_Automation\\src\\main\\java\\com\\trello\\configuration\\environment.properties");
 		Properties p = new Properties();
 		p.load(fileReader);
 		value = p.getProperty(key);

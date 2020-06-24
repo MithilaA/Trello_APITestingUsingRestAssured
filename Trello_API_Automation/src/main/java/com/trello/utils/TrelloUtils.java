@@ -17,6 +17,7 @@ public class TrelloUtils {
 		Properties p = new Properties();
 		p.load(fileReader);
 		value = p.getProperty(key);
+		fileReader.close();
 		return value;
 	}
 	

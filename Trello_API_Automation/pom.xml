@@ -32,9 +32,13 @@
         <configuration>
           <suiteXmlFiles>
             <suiteXmlFile>
-            C:\Users\mithilaa\git\Trello_APITestingUsingRestAssured\Trello_API_Automation\resources\testng.xml
+            resources\testng.xml
             </suiteXmlFile>
           </suiteXmlFiles>
+          
+          <configuration>
+			<outputDirectory>target\surefire-reports</outputDirectory>
+		</configuration>
         </configuration>
       </plugin>
   	
@@ -102,7 +106,7 @@
 	<dependency>
     	<groupId>com.relevantcodes</groupId>
     	<artifactId>extentreports</artifactId>
-    	<version>2.41.0</version>
+    	<version>2.41.2</version>
 	</dependency>
 	
 	

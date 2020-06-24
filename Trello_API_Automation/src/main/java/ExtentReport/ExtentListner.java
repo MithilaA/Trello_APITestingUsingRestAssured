@@ -25,7 +25,7 @@ public class ExtentListner implements IReporter {
 			String outputDirectory) {
 		extent = new ExtentReports(outputDirectory + File.separator
 				+ ""
-				+ "Trello_Suite_Report.html", true);
+				+ "Trello_Extent_Report.html", true);
 
 		for (ISuite suite : suites) {
 			Map<String, ISuiteResult> result = suite.getResults();
@@ -38,7 +38,7 @@ public class ExtentListner implements IReporter {
 				buildTestNodes(context.getSkippedTests(), LogStatus.SKIP);
 			}
 		}
-
+		
 		extent.flush();
 		extent.close();
 	}

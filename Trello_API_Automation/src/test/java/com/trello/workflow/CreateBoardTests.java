@@ -1,12 +1,12 @@
 package com.trello.workflow;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
 import com.trello.base.TrelloBase;
 import com.trello.create.CreateBoard;
 import com.trello.create.CreateCards;
@@ -84,10 +84,6 @@ public class CreateBoardTests extends TrelloBase{
 		Response listRes = createLists.createlistsInABoard(boardId, TrelloUtils.generateRandomListNames());
 		String listId = getLists.getListId(listRes);
 		Response cardRes = createCards.createListWithCustomCards(boardId, listId, givenCardNames);
-//		for(int i=0;i<actualCardNames.length;i++)
-//		{
-//		Assert.assertEquals(actualCardNames[i], givenCardNames[i]);
-//		}
 	}
 	
 	

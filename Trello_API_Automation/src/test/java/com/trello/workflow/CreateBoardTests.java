@@ -1,5 +1,8 @@
 package com.trello.workflow;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -62,11 +65,12 @@ public class CreateBoardTests extends TrelloBase{
 		Response boardRes = createBoard.createBoardWithCustomLists(givenBoardName, givenListNames);
 		Assert.assertEquals(getBoards.getBoardName(boardRes), givenBoardName);
 		String actualListNames[] = getLists.getNamesOfListsFromBoard(getBoards.getBoardid(boardRes));
-		for(int i=0;i<actualListNames.length;i++)
+		Boolean presenceOfList = false;
+		for(int i=0;i<givenListNames.length;i++)
 		{
-		Assert.assertEquals(actualListNames[i], givenListNames[i]);
+		presenceOfList = Arrays.asList(givenListNames).contains(actualListNames[i]);
 		}
-		
+		Assert.assertTrue(presenceOfList);
 	}
 	
 	@Test
@@ -80,8 +84,6 @@ public class CreateBoardTests extends TrelloBase{
 		Response listRes = createLists.createlistsInABoard(boardId, TrelloUtils.generateRandomListNames());
 		String listId = getLists.getListId(listRes);
 		Response cardRes = createCards.createListWithCustomCards(boardId, listId, givenCardNames);
-//      Add Assertion
-//		String actualCardNames[] = getCards.getAllCardNamesFromList(listRes);
 //		for(int i=0;i<actualCardNames.length;i++)
 //		{
 //		Assert.assertEquals(actualCardNames[i], givenCardNames[i]);

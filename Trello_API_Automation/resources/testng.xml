@@ -8,9 +8,9 @@
 	<test name = "Board_Tests">
 	
 	<classes>
-		<!--<class name="com.trello.workflow.CreateBoardTests"/>-->
+		<class name="com.trello.workflow.CreateBoardTests"/>
 		<class name="com.trello.workflow.UpdateBoardsTests"/>
-		<!--<class name="com.trello.workflow.DeleteBoardTests"/>-->
+		<class name="com.trello.workflow.DeleteBoardTests"/>
 	</classes>
 	</test>
 </suite>

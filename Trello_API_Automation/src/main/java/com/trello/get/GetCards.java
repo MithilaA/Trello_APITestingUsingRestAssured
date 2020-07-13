@@ -39,9 +39,5 @@ public class GetCards extends TrelloBase{
 		.then().assertThat().statusCode(200).extract().response();
 	}
 	
-	public void getAllCardNamesFromList(Response listRes)
-	{
-		
-	
-	}
+
 }
